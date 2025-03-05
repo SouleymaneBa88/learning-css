@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selecteurs d'attribut</title>
+</head>
+<body>
+    <style>
+        /* lang */
+        div[lang~=sh-gf-sjk]{ 
+            color: brown;
+        }
+
+
+        /* ce ci cible chaque class qui a un valeur qui se termine par 1 */
+         p[class*="1"]{ 
+            color: blue;
+        }
+        /* ce ci cible chaque id qui a un valeur qui se commence par l1 */
+        /* p[ id^="l1"]{ 
+            color: blue;si le coleur ne s'affiche pas ajoute !important
+        }*/
+         p[id|="l1"]{ 
+            background-color: blue !important;
+            /* clear: both; */
+        }
+      
+/* span + p --> selectionner la balise span vient directement apres une balise p */
+/* span ~ p --> selectionner la balise span qui sont freres de  p */
+/* span > p --> selectionner la balise span qui sont enfant de  p */
+
+        /* list-style-image:url(); */
+        /* list-style-position : inside et outside */
+        /* list-style-type : disc,circle,square,none,lower*alpha,upper*alpha,lower*roman; */
+        ul{
+            list-style-image: url();
+        }
+
+        /* OVERFLOW */
+        .div{
+            background-color: brown;
+            width:200PX;
+            height: 100PX;
+            overflow:auto scroll;
+            /* margin:0px auto; */
+            position: absolute;
+            left: 41%;
+            right: 41%;
+            
+        }
+
+        /* float menu 
+        .menu{
+            list-style: none;
+            overflow: hidden;
+            background-color: #333;
+            margin: 0;
+            padding: 0;
+            border-bottom: 2px solid red;
+        }
+        .li{
+            float: left;
+        }
+        .li a{
+            display: inline-block;
+            color: #fff;
+            padding: 10px 45px;
+            text-decoration: none;
+        }
+        .active{
+
+            background-color: red;
+        }
+        .li a:hover{
+            background-color: blue;
+        }*/
+        /* font-size =polise
+        .p{
+            font-size: xx-small;
+        }*/
+        /* font-weight= polise
+        .p{
+            font-weight: 900;
+        } */
+         /* font-style  
+         .p{
+            font-style:oblique;
+         } */
+          /* font-family = polise 
+          .p{
+            font-family:fantasy;
+          }*/
+
+
+          /* font-variable = il permet de mettre tout le text en majiscule en gardant le premier lettr de la phrase plus grand.
+          .p{
+            font-variant:small-caps;
+          }*/
+
+
+    </style>
+     <div lang="con ">Soubhanalah</div> 
+     <div lang="sh-gf-sjk">Alhamdouliah</div>
+     <div lang="gt">Allahounakbar</div>
+    <!-- <div lang="sb">La illah illa la</div> -->
+    <p class="r1">bla bla</p> 
+    <p class="s1">bla bla</p>
+    <p class="z1">bla bla</p>
+    <p id="l1">bla bla</p>
+     <p id="l1-rt">bla bla</p>
+    <!-- <p id="l1-dr">bla bla</p> -->
+        <ul>
+            <li>bla</li>
+            <li>bla</li>
+            <li>bla</li>
+            <li>bla</li>
+            </ul>
+            <div class="div">
+                Que vous soyez étudiants, informaticiens, mathématiciens, physiciens, économistes ou simplement passionnés par l'IA, rejoignez-nous sur EDULYTICS pour explorer les fascinantes opportunités qu'offre l'intelligence artificielle. 
+
+                
+                Au programme : des interventions d'experts, des démonstrations pratiques et des échanges enrichissants pour approfondir vos connaissances.  
+                
+                N'hésitez pas à vous inscrire dès maintenant et à partager cette opportunité avec votre réseau !  
+                
+                Cordialement,  
+                
+                Dr Mamadou Bousso
+                
+            </div>
+
+            <p class="p">Un niveau débutant à intermédiaire en python sera nécessaire pour bien profiter de ce premier webinaire mais ce n'est que le debut.</p> 
+
+            <ul class="menu">
+                <li class="li"><a href="home" class="active">home</a></li>
+                <li class="li"><a href="contact" >contact</a></li>
+                <li class="li"><a href="about" >about</a></li>
+            </ul>
+</body>
+</html>
